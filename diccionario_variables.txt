@@ -1,0 +1,25 @@
+DICCIONARIO DE VARIABLES - Dataset Ventas Tecnología
+=====================================================
+
+1. id_venta: Número único identificador de cada venta. Tipo: Entero
+2. fecha: Fecha en que se realizó la venta. Tipo: Fecha (YYYY-MM-DD)
+3. cliente: Nombre del cliente que compró. Tipo: Texto
+4. ciudad: Ciudad donde se realizó la venta. Tipo: Texto
+5. producto: Nombre del producto vendido. Tipo: Texto
+6. categoria: Categoría del producto (Computo, Celulares, Tablets,
+   Accesorios, Wearables). Tipo: Texto
+7. cantidad: Número de unidades vendidas. Tipo: Entero (1-5)
+8. precio_unitario: Precio en pesos colombianos por unidad. Tipo: Entero
+9. metodo_pago: Forma de pago (Tarjeta, Efectivo, Transferencia). Tipo: Texto
+10. edad_cliente: Edad del comprador en años. Tipo: Entero (18-100)
+11. satisfaccion: Calificación del cliente de 1 a 5. Tipo: Decimal
+12. total_venta: Columna calculada = cantidad × precio_unitario
+13. mes: Mes extraído de la fecha. Tipo: Texto
+
+TRANSFORMACIONES REALIZADAS:
+- Eliminación de duplicados
+- Relleno de nulos (cliente → "Desconocido", edad/cantidad → mediana)
+- Corrección de outliers en edad (fuera de 18-100)
+- Corrección de outliers en cantidad (>5)
+- Creación de columna "total_venta"
+- Extracción del mes
